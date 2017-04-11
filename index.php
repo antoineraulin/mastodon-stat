@@ -182,6 +182,8 @@ switch ($lang){
 <a href="https://antoineraulin.github.io" >My others projects</a>
 ·
 <a href="https://mastodonportal.herokuapp.com" >Mastodon Portal</a>
+·
+<a href="paypal.me/antoineraulin" id="don" data-tooltip="#donation">make a donation</a>
 </div>
 </div>
 </div>
@@ -205,6 +207,16 @@ switch ($lang){
 <p class="piva">Le média de référence sur l'innovation technologique et la société numérique www.numerama.com</p>
 </center>
 </div>
+<div class="diva" id="donation">
+<center><br>
+<img class="img-circle" src="PayPal.svg" alt="C20a9da88cbf5459">
+<br>
+<b style="color: white;font-family: Arial;">Why give me a gift?</b><br>
+
+<p class="piva">-because what I do you like?<br>- to support my projects?<br>To help me pay for web hosting?<br>- so I can offer quality services?<br>If you agree with one of these arguments, a donation would not be rejected so that I could continue to innovate.</p><br>
+
+</center>
+</div>
 </body>
 </html>
 <script>
@@ -220,6 +232,14 @@ $("#num").hover(function(e) {
     $($(this).data("tooltip")).css({
         left: e.pageX + 1,
         top: e.pageY - ($("#numerama").height() + 20)
+    }).stop().show(500);
+}, function() {
+    $($(this).data("tooltip")).hide();
+});
+$("#don").hover(function(e) {
+    $($(this).data("tooltip")).css({
+        left: e.pageX + 1,
+        top: e.pageY - ($("#donation").height() + 20)
     }).stop().show(500);
 }, function() {
     $($(this).data("tooltip")).hide();

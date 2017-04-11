@@ -183,7 +183,7 @@ switch ($lang){
 ·
 <a href="https://mastodonportal.herokuapp.com" >Mastodon Portal</a>
 ·
-<a href="paypal.me/antoineraulin" id="don" data-tooltip="#donation">make a donation</a>
+<a href="https://paypal.me/antoineraulin" id="don" data-tooltip="#donation">make a donation</a>
 </div>
 </div>
 </div>

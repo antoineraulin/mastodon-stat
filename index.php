@@ -99,6 +99,11 @@
     $time2 = $time2 -1;
     $k = array_rand($instancelist);
     $instancechoosed = $instancelist[$k];
+    
+    $dochtml = new DOMDocument();
+    $dochtml->loadHTMLFile("http://araulin.com:8080");
+    $data = $dochtml->getElementById('data')->nodeValue;
+    
     ?>
 <body class='about-body' onload="begin()">
 <div class='wrapper'>
@@ -145,6 +150,14 @@ Mastodon Stats
         break;        
     default:
         echo "<li><p><em class=\"odometer\" id=\"users\">".$usercount."</em> users.</p></li>";
+        break;
+}
+    switch ($lang){
+    case "fr":
+        echo "<li><p><em class=\"odometer\" id=\"usersplus\">".$data."</em> utilisateurs de plus par heure.</p></li>";
+        break;   
+    default:
+        echo "<li><p><em class=\"odometer\" id=\"usersplus\">".$data."</em> more users per hour.</p></li>";
         break;
 }
 switch ($lang){

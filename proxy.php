@@ -18,12 +18,12 @@ $dochtml = new DOMDocument();
                 $time = false;
             }else{
                 $content = explode("\n", $tr);
+                $content[3] = preg_replace('/\s/', '', $content[3]);
                 $content[4] = preg_replace('/\s/', '', $content[4]);
                 $content[5] = preg_replace('/\s/', '', $content[5]);
-                $content[6] = preg_replace('/\s/', '', $content[6]);
-                $int = (int) preg_replace('/\D/', '', $content[4]);
-                $int2 = (int) preg_replace('/\D/', '', $content[5]);
-                $int3 = (int) preg_replace('/\D/', '', $content[6]);
+                $int = (int) preg_replace('/\D/', '', $content[3]);
+                $int2 = (int) preg_replace('/\D/', '', $content[4]);
+                $int3 = (int) preg_replace('/\D/', '', $content[5]);
                 $usercount = $usercount + $int;
                 $messagescount = $messagescount + $int2;
                 $interconnexions = $interconnexions + $int3;

@@ -265,7 +265,7 @@ function getData(){
        url: 'proxy.php',
         type: 'POST',
         data: {
-            address: 'https://instances.mastodon.xyz'
+            address: 'https://instances.mastodon.xyz/all'
         },
         success: function(str){
             console.log(str);

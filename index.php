@@ -56,7 +56,7 @@
     
     $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
     $dochtml = new DOMDocument();
-    $dochtml->loadHTMLFile("https://instances.mastodon.xyz/all");
+    $dochtml->loadHTMLFile("https://instances.mastodon.xyz/list");
     $time = true;
     $time2 = 0;
     $instancelist = [];
